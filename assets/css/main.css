@@ -1,0 +1,41 @@
+/* Externalized main stylesheet for DeepSeas DMCC (extracted from inline styles and expanded) */
+:root{
+  --accent:#d7b56d;
+  --dark:#0b0b0b;
+  --muted:#666;
+  --bg:#ffffff;
+  --radius:8px;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, "Helvetica Neue", Arial, sans-serif;background:#f6f7fb;color:var(--dark);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-width);margin:28px auto;padding:20px}
+/* Header */
+header.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+header.site-header .logo img{height:44px}
+nav.primary-nav a{color:var(--muted);text-decoration:none;margin-right:12px}
+/* Hero / contact layout */
+.hero{background:linear-gradient(180deg,#fff 0%,#fbfbfb 100%);padding:28px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.05);display:flex;gap:28px;flex-wrap:wrap}
+.hero-left{flex:1 1 360px;min-width:280px}
+.hero-right{flex:1 1 420px;min-width:320px}
+h1{margin:0 0 8px;font-size:26px}
+p.lead{margin:0 0 14px;color:var(--muted)}
+.info-card{background:#fff;padding:16px;border-radius:10px;border:1px solid #eee}
+.info-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px}
+.info-item i{width:36px;height:36px;border-radius:8px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-style:normal}
+/* Form */
+form.contact-form{background:#fff;padding:18px;border-radius:10px;border:1px solid #eee;display:flex;flex-direction:column;gap:12px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.col{flex:1 1 160px;min-width:140px}
+input[type="text"], input[type="email"], input[type="tel"], textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #ddd;font-size:14px;background:#fff}
+textarea{min-height:120px;resize:vertical}
+button[type="submit"]{background:var(--dark);color:#fff;padding:12px 16px;border:0;border-radius:8px;font-weight:600;cursor:pointer;width:220px}
+.muted{color:var(--muted);font-size:13px}
+.success, .error{padding:12px;border-radius:8px;font-weight:500;display:none}
+.success{background:#e6f7ed;color:#036a2a;border:1px solid #c6efd4}
+.error{background:#fff2f2;color:#8a1f1f;border:1px solid #ffd6d6}
+footer.site-footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
+/* Utilities */
+.hidden{display:none}
+/* responsive */
+@media (max-width:800px){.hero{flex-direction:column}button[type="submit"]{width:100%}}
